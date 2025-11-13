@@ -8,7 +8,9 @@ export default function LoginScreen() {
   function handleLogin() {
     //1 passo - validar usuario e senha
     if(email === 'admin' && senha === '1234') {
-      );
+      Alert.alert('Usuario valido');
+    } else {
+      Alert.alert('Usuario não encontrado');
     }
     //2 passo - redirecionar para a tela principal
   }
@@ -22,7 +24,7 @@ export default function LoginScreen() {
       <Text>Senha {senha}</Text>
       <TextInput placeholder="Digite sua senha" onChangeText={(e) => setSenha(e)} ></TextInput>
 
-      <Button title="Entrar" onPress={} ></Button>
+      <Button title="Entrar" onPress={handleLogin} ></Button>
 
     </View>
   );
