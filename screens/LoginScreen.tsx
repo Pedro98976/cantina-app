@@ -4,6 +4,15 @@ import { View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
 export default function LoginScreen() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+
+  function handleLogin() {
+    //1 passo - validar usuario e senha
+    if(email === 'admin' && senha === '1234') {
+      );
+    }
+    //2 passo - redirecionar para a tela principal
+  }
+
   return (
     <View style={styles.container}>
 
@@ -13,7 +22,7 @@ export default function LoginScreen() {
       <Text>Senha {senha}</Text>
       <TextInput placeholder="Digite sua senha" onChangeText={(e) => setSenha(e)} ></TextInput>
 
-      <Button title="Entrar" onPress={() => Alert.alert(`usuario: ${email}`,`senha: ${senha}` )} ></Button>
+      <Button title="Entrar" onPress={} ></Button>
 
     </View>
   );
