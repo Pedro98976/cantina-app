@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function LoginScreen() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const navigation = useNavigation();
 
   function handleLogin() {
     //1 passo - validar usuario e senha
     if(email === 'admin' && senha === '1234') {
-      Alert.alert('Usuario valido');
+      navigation.navigate('HomeScreen');
     } else {
       Alert.alert('Usuario não encontrado');
     }
     //2 passo - redirecionar para a tela principal
+
   }
 
   return (
